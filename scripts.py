@@ -25,6 +25,7 @@ def service_enum(target, port):
 parser = argparse.ArgumentParser(description="A simple pentest script.")
 parser.add_argument("-t", "--target", required=True, help="Target IP address.")
 parser.add_argument("-p", "--ports", nargs="+", default=[22, 80, 443], type=int, help="Ports to scan.")
+parser.add_argument("-w", "--wordlist-file", type=argparse.FileType('r'), required=True)
 
 args = parser.parse_args()
 
